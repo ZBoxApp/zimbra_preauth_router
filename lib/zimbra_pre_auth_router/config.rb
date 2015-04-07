@@ -56,6 +56,16 @@ module ZimbraPreAuthRouter
     def self.old_preauth_key
       @old_preauth_key
     end
+    
+    def self.logo_img=(logo = nil)
+      @logo_img = logo || "logo.png"
+    end
+    
+    def self.logo_img
+      @logo_img
+    end
+    
+    
 
   end
 end

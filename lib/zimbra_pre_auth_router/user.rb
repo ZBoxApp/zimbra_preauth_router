@@ -63,8 +63,11 @@ module ZimbraPreAuthRouter
     end
 
     def self.load_migrated_users
-      return {} if ZimbraPreAuthRouter::Config.migrated_users_file.nil?
-      YAML.load_file ZimbraPreAuthRouter::Config.migrated_users_file
+      begin
+        YAML.load_file ZimbraPreAuthRouter::Config.migrated_users_file  
+      rescue Exception => e
+        Hash.new
+      end
     end
 
     def self.DB

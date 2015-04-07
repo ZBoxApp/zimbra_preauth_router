@@ -61,5 +61,18 @@ class UserTest < Minitest::Test
     u = ZimbraPreAuthRouter::User.new("pbruna")
     assert_equal(ZimbraPreAuthRouter::Config.old_backend_url, u.backend_url)
   end
+  
+  def test_should_return_emtpy_hash_if_not_migration_file_exist
+    ZimbraPreAuthRouter::Config.migrated_users_file = "/tmp/null"
+    assert_equal({}, ZimbraPreAuthRouter::User.DB)
+    ZimbraPreAuthRouter::Config.migrated_users_file="./test/fixtures/users.yml"
+  end
+  
+  def test_should_return_emtpy_hash_if_file_is_nil
+    ZimbraPreAuthRouter::Config.migrated_users_file = nil
+    assert_equal({}, ZimbraPreAuthRouter::User.DB)
+    ZimbraPreAuthRouter::Config.migrated_users_file="./test/fixtures/users.yml"
+  end
+  
 
 end
