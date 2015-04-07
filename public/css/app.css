@@ -1,0 +1,38 @@
+body {
+  background: rgb(237, 240, 245)
+}
+
+.login-button {
+  color: white;
+  background: #34495e;
+}
+
+.login-button:hover {
+  color: white;
+  background-color:#3f5872;
+}
+
+.footer {
+  margin-top: 100px;
+}
+
+.footer p {
+  color: rgb(101, 101, 101);
+  cursor: default;
+  display: block;
+  font-family: 'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', sans-serif;
+  font-size: 12px;
+  height: 14px;
+  margin-bottom: 5px;
+}
+
+.panel {
+  padding: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.panel-info > .panel-heading {
+  background-color: white;
+  border:none;
+}

@@ -1,0 +1,43 @@
+<div class="container">    
+  <div id="loginbox" style="margin-top:150px;" class="mainbox col-md-7 col-md-offset-3 col-sm-8 col-sm-offset-3">
+    <div class="panel panel-info" >
+
+      <div class="panel-heading">
+         <div class="panel-title">
+             <img src="logo.png">
+         </div>
+     </div>
+      <div style="padding-top:30px" class="panel-body" >
+        <% if session[:login_error] %>
+          <div id="login-alert" class="alert alert-danger col-sm-12" style="margin-top:-10px">
+            Dirección de correo o contraseña incorrecta
+          </div>
+        <% end %>
+                        
+          <form id="loginform" class="form-horizontal" role="form" method="post" action="/login">
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">Nombre de usuario: </label>
+                <div class="col-sm-7">
+                  <input type="email" name="username" class="form-control" id="inputEmail3" placeholder="Email">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword3" class="col-sm-4 control-label">Contraseña: </label>
+                <div class="col-sm-7">
+                  <input type="password" name="password" class="form-control" id="inputPassword3" placeholder="Contraseña">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-9 text-right">
+                  <button type="submit" class="btn btn-default login-button">Iniciar sesión</button>
+                </div>
+              </div>   
+          </form>
+        </div>                     
+      </div>
+    </div>
+</div>
+<div class="footer text-center">
+  <p>ZBox Mail : Correo en la nube, seguro y facil de usar</p>
+  <p>Copyright © 2014-2015 ZBox Spa. Todos los derechos reservados</p>
+</div>
