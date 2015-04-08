@@ -77,11 +77,17 @@ $ docker pull pbruna/zimbra_preauth_router
 ```
 
 **3. Launch and Profit**
-A couple of notes on the parameters:
 
-* `-p 80:80`: listen on port 80
-* `-v /opt/zimbra_preauth_router:/opt/zimbra_preauth_router`: share the local `/opt/zimbra_preauth_route` folder with the docker container, here you will create the `users.yml` file.
-* `-e *`: all of this are ENV variables to pass to Zimbra Preauth Router.
+A couple of notes about the parameters:
+
+`-p 80:80`
+listen on port 80
+
+`-v /opt/zimbra_preauth_router:/opt/zimbra_preauth_router`
+share the local `/opt/zimbra_preauth_route` folder with the docker container, here you will create the `users.yml` file.
+
+`-e *`
+all of this are ENV variables to pass to Zimbra Preauth Router.
 
 ```bash
 $ docker run -p 80:80 -v /opt/zimbra_preauth_router:/opt/zimbra_preauth_router \
@@ -147,7 +153,7 @@ New Preauth Key: 9b34da63e5c1cba4cf7eb8262bacb18f712f6abafb02cf670234cb9bca63cb3
 [2015-04-08 10:59:05] INFO  WEBrick::HTTPServer#start: pid=18655 port=8080
 ```
 
-And now you can point your browser to the IP address at port 8080.
+And now you can point your browser to  `http://HOST_IP_ADDR:8080`
 
 
 ## Contributing
