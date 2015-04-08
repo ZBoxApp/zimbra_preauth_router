@@ -64,10 +64,12 @@ module ZimbraPreAuthRouter
 
     def self.load_migrated_users
       begin
-        YAML.load_file ZimbraPreAuthRouter::Config.migrated_users_file  
+        db = YAML.load_file ZimbraPreAuthRouter::Config.migrated_users_file
       rescue Exception => e
-        Hash.new
+        db = Hash.new
       end
+      return {} unless db
+      db
     end
 
     def self.DB
