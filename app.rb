@@ -8,16 +8,15 @@ class App < Sinatra::Base
   
   configure :production, :development do
     enable :logging
+    enable :session
   end
   
-  enable :session
-  
   get '/' do
+    @login_error = params[:login_error]
     erb :index
   end
   
   post '/login' do
-    session.delete(:login_error)
     user = ZimbraPreAuthRouter::User.new(params[:username], params[:password])
     login = user.login
     logger.info "Authenticating #{user.email} agains #{user.backend_url}"
@@ -26,8 +25,7 @@ class App < Sinatra::Base
       redirect to("#{user.backend_url}/#{user.preatuh_url}")
     else
       logger.info "Auth Failed for #{user.email}"
-      session[:login_error] = 'true'
-      redirect to("/")
+      redirect to("/?login_error=true")
     end
   end
 
