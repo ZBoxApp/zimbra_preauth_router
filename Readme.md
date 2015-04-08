@@ -81,12 +81,15 @@ $ docker pull pbruna/zimbra_preauth_router
 A couple of notes about the parameters:
 
 `-p 80:80`
+
 listen on port 80
 
 `-v /opt/zimbra_preauth_router:/opt/zimbra_preauth_router`
+
 share the local `/opt/zimbra_preauth_route` folder with the docker container, here you will create the `users.yml` file.
 
 `-e *`
+
 all of this are ENV variables to pass to Zimbra Preauth Router.
 
 ```bash
