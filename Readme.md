@@ -92,6 +92,8 @@ share the local `/opt/zimbra_preauth_route` folder with the docker container, he
 
 all of this are ENV variables to pass to Zimbra Preauth Router.
 
+Run it:
+
 ```bash
 $ docker run -p 80:80 -v /opt/zimbra_preauth_router:/opt/zimbra_preauth_router \
   -e "DOMAIN=ind.cl" \
