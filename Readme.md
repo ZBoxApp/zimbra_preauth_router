@@ -61,8 +61,6 @@ $ zmprov ga pbruna@example.com zimbraId
 zimbraId: 7302d6d0-c024-0132-207e-482a1423458f
 ```
 
-You have to ways to use `ZPR`:
-
 ## Install and Run
 You have to ways to use `ZPR`: Manual Setup and Docker Img.
 We recomend the Docker Img.
