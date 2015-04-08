@@ -96,12 +96,12 @@ Run it:
 
 ```bash
 $ docker run -p 80:80 -v /opt/zimbra_preauth_router:/opt/zimbra_preauth_router \
-  -e "DOMAIN=ind.cl" \
+  -e "DOMAIN=example.com" \
   -e "OLD_BACKEND=http://mail.example.com" \
   -e "NEW_BACKEND=http://new-mail.example.com" \
   -e "OLD_PREAUTH_KEY=9b34da63e5c1cba4cf7eb8262bacb18f712f6abafb02cf670234cb9bca63cb31" \
   -e "NEW_PREAUTH_KEY="9b34da63e5c1cba4cf7eb8262bacb18f712f6abafb02cf670234cb9bca63cb31" \
-  -e "LOGO=http://www.ind.cl/wp-content/themes/mindep-2014/images/logo.png" \
+  -e "LOGO=http://blog.itlinux.cl/images/ZBox.png" \
   -e "USERS_FILE=/opt/zimbra_preauth_router/users.yml" \
   pbruna/zimbra_preauth_router
 ```
