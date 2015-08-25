@@ -33,6 +33,22 @@ module ZimbraPreAuthRouter
       @new_backend = new_backend
     end
 
+    def self.new_backend_path=(new_path)
+      @new_backend_path = new_path || '/zimbra/'
+    end
+
+    def self.new_backend_path
+      @new_backend_path
+    end
+
+    def self.old_backend_path=(new_path)
+      @old_backend_path = new_path || '/zimbra/'
+    end
+
+    def self.new_backend_path
+      @old_backend_path
+    end
+
     def self.old_backend_url
       @old_backend
     end
@@ -40,32 +56,32 @@ module ZimbraPreAuthRouter
     def self.new_backend_url
       @new_backend
     end
-    
+
     def self.new_preauth_key=(token)
       @new_preauth_key = token
     end
-    
+
     def self.old_preauth_key=(token)
       @old_preauth_key = token
     end
-    
+
     def self.new_preauth_key
       @new_preauth_key
     end
-    
+
     def self.old_preauth_key
       @old_preauth_key
     end
-    
+
     def self.logo_img=(logo = nil)
       @logo_img = logo || "logo.png"
     end
-    
+
     def self.logo_img
       @logo_img
     end
-    
-    
+
+
 
   end
 end
