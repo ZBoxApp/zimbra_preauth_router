@@ -15,7 +15,7 @@ ZimbraPreAuthRouter::Config.domain = ENV['DOMAIN']
 # of migrated mailboxes.
 ZimbraPreAuthRouter::Config.migrated_users_file = ENV['USERS_FILE']
 
-# Origin Webmail URL 
+# Origin Webmail URL
 # Like "http://mail.domain.com"
 ZimbraPreAuthRouter::Config.old_backend_url = ENV['OLD_BACKEND']
 
@@ -25,7 +25,7 @@ ZimbraPreAuthRouter::Config.new_backend_url = ENV['NEW_BACKEND']
 
 # Domain Pre Auth Key on Origin Platform
 # You can get the key running $ zmprov gd domain.com zimbraPreAuthKey
-# Read here how to setup it https://wiki.zimbra.com/wiki/Preauth 
+# Read here how to setup it https://wiki.zimbra.com/wiki/Preauth
 ZimbraPreAuthRouter::Config.old_preauth_key = ENV['OLD_PREAUTH_KEY']
 
 # Domain Pre Auth Key on Destination Platform
@@ -38,6 +38,7 @@ ZimbraPreAuthRouter::Config.new_preauth_key = ENV['NEW_PREAUTH_KEY']
 ###### DONT TOUCH FROM HERE ######################
 
 puts "------------------------------------------------"
+puts "ZimbraPreAuthRouter v. #{ZimbraPreAuthRouter::VERSION}"
 puts "Starting server with the following configuration"
 puts "Domain: #{ZimbraPreAuthRouter::Config.domain}"
 puts "Logo img: #{ZimbraPreAuthRouter::Config.logo_img}"
