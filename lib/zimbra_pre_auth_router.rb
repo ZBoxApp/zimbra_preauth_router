@@ -8,5 +8,5 @@ require_relative "zimbra_pre_auth_router/config"
 require_relative "zimbra_pre_auth_router/login"
 
 module ZimbraPreAuthRouter
-  
+  VERSION = "0.2"
 end
